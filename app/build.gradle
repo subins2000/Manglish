@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    namespace "subins2000.manglish"
+    compileSdkVersion 34
     defaultConfig {
         applicationId "subins2000.manglish"
         minSdkVersion 15
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 7
         versionName "7.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -17,6 +18,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {

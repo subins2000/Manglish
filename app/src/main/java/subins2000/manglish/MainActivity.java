@@ -152,18 +152,20 @@ public class MainActivity extends AppCompatActivity
         try {
             if (activeNavId != id) {
                 activeNavId = id;
-                switch (id) {
-                    case R.id.nav_home:
-                        setFragment(new HomeFragment());
-                        return true;
-                    case R.id.nav_overlay_about:
-                        setFragment(new OverlayAboutFragment());
-                        return true;
-                    case R.id.nav_about:
-                        setFragment(new AboutFragment());
-                        return true;
-                    case R.id.nav_share:
-                        shareApp();
+                if (id == R.id.nav_home) {
+                    setFragment(new HomeFragment());
+                    return true;
+                }
+                if (id == R.id.nav_overlay_about) {
+                    setFragment(new OverlayAboutFragment());
+                    return true;
+                }
+                if (id == R.id.nav_about) {
+                    setFragment(new AboutFragment());
+                    return true;
+                }
+                if (id == R.id.nav_share) {
+                    shareApp();
                 }
             }
             return false;
